@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import UserProfile from "./pages/UserProfile";
 import MyProfile from "./pages/UserProfileOwn";
+import ForumPage from "./pages/Forum";
+import SkillExchangeBoard from "./pages/SkillExchange";
 
 const queryClient = new QueryClient();
 
@@ -18,8 +20,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/skillexchange" element={<SkillExchangeBoard />} />
           <Route path="/user" element={<UserProfile />} />
           <Route path="/userown" element={<MyProfile />} />
+          <Route path="/forum" element={<ForumPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
