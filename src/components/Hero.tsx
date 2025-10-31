@@ -1,5 +1,6 @@
 import { Coffee, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-community.jpg";
 
 const Hero = () => {
@@ -27,10 +28,12 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Start Exchanging
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/features">
+                <Button variant="hero" size="lg" className="group">
+                  Start Exchanging
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 How It Works
               </Button>
